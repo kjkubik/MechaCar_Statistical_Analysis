@@ -26,3 +26,32 @@ total_summary <- suspend_df %>% summarize(Mean=mean(PSI), Median=median(PSI), Va
 
 # mean, median, variance and standard deviation (group by Manufacturing Lot)
 lot_summary <- suspend_df %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI), Median=median(PSI), Variance=var(PSI), SD=sd(PSI), .groups = 'keep') #create summary table
+
+###############################################
+# Deliverable 3: T-Tests on Suspension Coils  #
+###############################################
+
+# given the population's mean is 1,500 PSI, we test to see if the PSI 
+# is statistically different across all lots: 
+PSI_all_lots <- t.test(suspend_df$PSI, mu=1500)
+
+# given the population's mean is 1500 PSI, we test to see if the PSI 
+# is statistically different FOR EACH lot: 
+PSI_lot1 <- t.test(subset(suspend_df,Manufacturing_Lot=="Lot1")$PSI, mu=1550)
+print(PSI_lot1)
+
+PSI_lot2 <- t.test(subset(suspend_df,Manufacturing_Lot=="Lot2")$PSI, mu=1550)
+print(PSI_lot2)
+
+PSI_lot3 <- t.test(subset(suspend_df,Manufacturing_Lot=="Lot3")$PSI, mu=1550)
+print(PSI_lot3)
+
+
+#t.test(log10(sample_table$Miles_Driven),mu=mean(log10(population_table$Miles_Driven))) #compare sample versus population means
+
+#> filter_table2 <- subset(demo_table2, price > 10000 & drive == "4wd" & "clean" %in% title_status) #filter by price and drivetrain
+# one-sample t-test
+
+#t.test(subset(suspend_df$PSI, suspend_df$Manufacturing_Lot=="Lot1"), mu=1500)
+#t.test(subset(suspend_df$PSI, suspend_df$Manufacturing_Lot=="Lot2"), mu=1500)
+#t.test(subset(suspend_df$PSI, suspend_df$Manufacturing_Lot=="Lot3"), mu=1500)
