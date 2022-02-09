@@ -38,18 +38,40 @@ Next, Lot3 is showing a LARGE variance, lot3's data (as well as the machines use
 
 To determine whether the mean PSI values are equal to the population mean 1500 for the total lots and for each lot individually, one-sample t-tests were performed and the results are shown below.
 
-The first t-test (shown below) is performed on the entire dataset. The resulting data from the t-test shows us a p-value of .06028. This p-value is above the normal statistical significance level of 5%. Therefore, the p-value indicates the null hypothesis shouldn't be rejected and the means are statistically similar.
+The first t-test (shown below) is performed on the entire dataset. The resulting data from the t-test shows us a p-value of .06028. This p-value is above the normal statistical significance level of 5%. Therefore, the p-value indicates the null hypothesis should not be rejected and the means are statistically similar.
 ![](images/D3-1.png)
 
-The other t-tests performed are on each of the dataset's lot number subsets. The first and second lots, Lot1 and Lot2, each show a p-value agreeing with the entire dataset's results.
+As for the other t-tests. Lot1 and Lot 2 are not below the 5% statistical significant's level. Therefore, we do not have sufficient evidence to reject the null hypothesis. The two means are statistically similar. Both p-values agree with the entire dataset's results.
 
 ![](images/D3-2.png)![](images/D3-3.png)
-
-It is not until we observe Lot3's resulting t-test that we are able to see a statistical significace level of 5%.
+However, when observing Lot3's resulting t-test, we are able to see the p-level is under the statistical significace level of 5%. Therefore, we reject the null hypothesis.
 
 ![](images/D3-4.png)
 
-Summary: We do not have sufficient evidence to reject the null hypothesis for lots 1 and 2 however, and we would state that the two means are statistically similar.
+Summary: We do not have sufficient evidence to reject the null hypothesis for lots 1 and 2. However, we would reject the null hypothosis and state Lot3 is not statistically similar to the population.
 
 ## Design a Study Comparing the MechaCar to the Competition
+
+MechaCar needs to make sure they are selling as many cars as they can possibly can. They are attempting to use their current customer car search engine to come up with factors important to the drivers of their current vewhicles.
+
+MechaCar will be able to gather the following data:
+
+- maximum speed the car(s) will go
+- engine size
+- ease of mantanence
+- safety features
+- crash dummy test score
+- safety ratings/scores
+- maintenance costs
+- warranties
+- overall cost of the vehicle
+- comfortability rating
+- user friendliness
+- designed for the buyer rating (does the customer like the look and feel of the car)
+
+Once the data is gathered, it will be studied first by attempting linear regression, summary and t-tests.The question that our study will attempt answering is: Does anyone of these metrics effect the number of cars sold?
+
+The null hypothesis will the following (where x is one of the metrics given): If x is not related to the number of cars sold, then this metric will not be found as part of a customer's search.
+
+If any of the data is found to be of any statistical significants, it will be used in an ANOVA analysis with other customer database obtained by MechaCar. 
 
