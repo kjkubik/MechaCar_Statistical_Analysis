@@ -36,7 +36,7 @@ Next, Lot3 is showing a LARGE variance, lot3's data (as well as the machines use
 
 ## T-Test on Suspension Coils
 
-The one-sample t-test is used to determine whether there is a statistical difference between the means of a sample dataset and a hypothesized, potential population dataset.
+To determine whether the mean PSI values are equal to the population mean 1500 for the total lots and for each lot individually, one-sample t-tests were performed and the results are shown below.
 
 The first t-test (shown below) is performed on the entire dataset. The resulting data from the t-test shows us a p-value of .06028. This p-value is above the normal statistical significance level of 5%. Therefore, the p-value indicates the null hypothesis shouldn't be rejected and the means are statistically similar.
 ![](images/D3-1.png)
